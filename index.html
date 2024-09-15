@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1440 Power System</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container for Content */
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* SVG Styling */
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Text Styling */
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .slogan {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ff4500;
+            font-style: italic;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 400px) {
+            .title {
+                font-size: 1.3em;
+            }
+            .slogan {
+                font-size: 0.9em;
+            }
+            text {
+                font-size: 6px;
+            }
+        }
+
+        /* Optional: Add subtle animation to SVG sectors */
+        .zone {
+            transition: transform 0.3s ease, fill 0.3s ease;
+        }
+
+        .zone:hover {
+            transform: scale(1.05);
+            fill-opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SVG Graphic -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"> 
+            <!-- Background Circle with Gradient -->
+            <defs>
+                <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#a6b5c0; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#d9e2ec; stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" />
+            
+            <!-- Livelihood Zone (480 minutes = 120 degrees) -->
+            <path 
+                class="zone" 
+                d="
+                    M100 100 
+                    L100 10 
+                    A90 90 0 0 1 190 100 
+                    Z" 
+                fill="#1e90ff" />
+            <text x="145" y="55" fill="white" font-size="8" text-anchor="middle">Livelihood</text>
+            <text x="145" y="65" fill="white" font-size="6" text-anchor="middle">480 min</text>
+            
+            <!-- On-Time Zone (540 minutes = 135 degrees) -->
+            <path 
+                class="zone" 
+                d="
+                    M100 100 
+                    L190 100 
+                    A90 90 0 0 1 100 190 
+                    Z" 
+                fill="#ff4500" />
+            <text x="145" y="145" fill="white" font-size="8" text-anchor="middle">On-Time</text>
+            <text x="145" y="155" fill="white" font-size="6" text-anchor="middle">540 min</text>
+            
+            <!-- Sleep Zone (420 minutes = 105 degrees) -->
+            <path 
+                class="zone" 
+                d="
+                    M100 100 
+                    L100 190 
+                    A90 90 0 0 1 100 10 
+                    Z" 
+                fill="#32cd32" />
+            <text x="55" y="55" fill="black" font-size="8" text-anchor="middle">Sleep</text>
+            <text x="55" y="65" fill="black" font-size="6" text-anchor="middle">420 min</text>
+            
+            <!-- Central Text with Shadow -->
+            <text 
+                x="100" 
+                y="95" 
+                fill="#333" 
+                font-size="10" 
+                text-anchor="middle" 
+                font-weight="bold"
+                style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                1440 Power
+            </text>
+            <text 
+                x="100" 
+                y="110" 
+                fill="#333" 
+                font-size="10" 
+                text-anchor="middle" 
+                font-weight="bold"
+                style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                System
+            </text>
+        </svg>
+        
+        <!-- Title and Slogan -->
+        <div class="title">The 1440 Power System</div>
+        <div class="slogan">Own your minutes, own your life</div>
+    </div>
+</body>
+</html>
